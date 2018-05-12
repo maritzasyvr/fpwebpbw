@@ -1,523 +1,315 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="shortcut icon" href="images/star.png" type="favicon/ico" /> -->
-
-        <title>Mamma's Kitchen</title>
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/owl.theme.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/flexslider.css">
-        <link rel="stylesheet" href="css/pricing.css">
-        <link rel="stylesheet" href="css/main.css">
-
-
-        <script src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
-        <script type="text/javascript">
-            $(window).load(function() {
-                $('.flexslider').flexslider({
-                 animation: "slide",
-                 controlsContainer: ".flexslider-container"
-                });
-            });
-        </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script>
-            function initialize() {
-                var mapCanvas = document.getElementById('map-canvas');
-                var mapOptions = {
-                    center: new google.maps.LatLng(24.909439, 91.833800),
-                    zoom: 16,
-                    scrollwheel: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions)
-
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(24.909439, 91.833800),
-                    title:"CAILANO"
-                });
-
-                // To add the marker to the map, call setMap();
-                marker.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-
-    </head>
-    <body data-spy="scroll" data-target="#template-navbar">
-
-        <!--== 4. Navigation ==-->
-        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">
-                        <img id="logo" src="images/Logo_main.png" class="logo img-responsive">
-                    </a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="Food-fair-toggle">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#about">tentang kami</a></li>
-                        <li><a href="#pricing">menu</a></li>
-                        <li><a href="#reserve">reservasi</a></li>
-                        <li><a href="#contact">kontak</a></li>
-                        <li><a href=indexlogin.php>masuk</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.row -->
-        </nav>
-
-
-        <!--== 5. Header ==-->
-        <section id="header-slider" class="owl-carousel">
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title" style="color:white">RASA BINTANG LIMA</h1>
-                        <p class="header-sub-title" style="color:white">Lidah anda dimanjakan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-            <div class="item">
-                <div class="container">
-                    <div class="header-content">
-                        <h1 class="header-title">HARGA KAKI LIMA</h1>
-                        <p class="header-sub-title">Dompet anda tidak kekeringan</p>
-                    </div> <!-- /.header-content -->
-                </div>
-            </div>
-           
-        </section>
-
-
-
-        <!--== 6. About us ==-->
-        <section id="about" class="about">
-            <img src="images/icons/about_color.png" class="img-responsive section-icon hidden-sm hidden-xs">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="hidden-xs col-sm-6 section-bg about-bg dis-table-cell">
-
-                        </div>
-                        <div class="col-xs-12 col-sm-6 dis-table-cell">
-                            <div class="section-content">
-                                <h2 class="section-content-title">Tentang kami</h2>
-                                <p class="section-content-para">
-                                    Mamma's kitchen adalah sebuat cafe khas anak muda yang menyajikan makanan dari mancanegara.
-                                <p class="section-content-para">
-                                    Dengan interior yang menawan, Mamma's kitchen hadir untuk memberikan kelezatan tak terhingga dari sajian-sajiannya yang menakjubkan.
-                                </p>
-                            </div> <!-- /.section-content -->
-                        </div>
-                    </div> <!-- /.row -->
-                </div> <!-- /.container-fluid -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#about -->
-
-
-        <!--==  7. Afordable Pricing  ==-->
-        <section id="pricing" class="pricing">
-            <div id="w">
-                <div class="pricing-filter">
-                    <div class="pricing-filter-wrapper">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-10 col-md-offset-1">
-                                    <div class="section-header">
-                                        <h2 class="pricing-title">Intip menu-menu terbaik kami</h2>
-                                        <ul id="filter-list" class="clearfix">
-                                            <li class="filter" data-filter="all">Semua</li>
-                                            <li class="filter" data-filter=".breakfast">Sarapan</li>
-                                            <li class="filter" data-filter=".special">Spesial</li>
-                                            <li class="filter" data-filter=".desert">Penutup</li>
-                                            <li class="filter" data-filter=".dinner">Makan malam</li>
-                                        </ul><!-- @end #filter-list -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row">  
-                        <div class="col-md-10 col-md-offset-1">
-                            <ul id="menu-pricing" class="menu-price">
-                                <li class="item dinner">
-
-                                    <a href="#">
-                                        <img src="images/food1.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc text-center">
-                                            <span>
-                                                <h3>Kari tomat</h3>
-                                                Potongan tomar segar berlapis saus kari
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 17.000</h2>
-                                </li>
-
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="images/food2.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Udang asam manis</h3>
-                                                Udang segar dengan varian saus asam manis
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 30.000</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="images/food3.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Rebusan tomat</h3>
-                                                Tomat yang direbus dengan teknik soft boiling
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 15.000</h2>
-                                </li>
-                                <li class="item breakfast special">
-
-                                    <a href="#">
-                                        <img src="images/food4.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Udang telur asin</h3>
-                                                Udang segar dengan varian saus telur asin
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 30.000</h2>
-                                </li>
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="images/food5.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Salad sayur</h3>
-                                                Salad yang terdiri dari bermacam sayuran seperti kentang, kol, dan jagung
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 20.000</h2>
-                                </li>
-                                <li class="item dinner special">
-
-                                    <a href="#">
-                                        <img src="images/food6.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Ayam saus inggris</h3>
-                                                Potongan ayam dipalisi saus kecap dan rawit merah
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 28.000</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="images/food7.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Makaroni paprika</h3>
-                                                Makrani dengan potongan ayam kecil dan paprika hijau
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 33.000</h2>
-                                </li>
-                                <li class="item dinner">
-
-                                    <a href="#">
-                                        <img src="images/food8.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Selada saus jeruk nipis</h3>
-                                                Sayuran segar diselimuti varian saus jeruk nipis
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 17.000</h2>
-                                </li>
-                                <li class="item desert special">
-
-                                    <a href="#">
-                                        <img src="images/food9.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Roti es krim</h3>
-                                                Roti panggang dilapisi es krim coklat dan stroberi
-                                            </span>
-                                        </div>
-                                    </a>
-                                    
-                                    <h2 class="white">Rp 18.000</h2>
-                                </li>  
-                            </ul>
-
-                            <!-- <div class="text-center">
-                                    <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
-                            </div> -->
-
-                        </div>   
-                    </div>
-                </div>
-
-            </div> 
-        </section>
-
-
-        
-
-
-       
-
-
-     
-
-
-       
-        <!--== 14. Have a look to our dishes ==-->
-
-        <section id="have-a-look" class="have-a-look hidden-xs">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/food_color.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="menu-gallery" style="width: 50%; float:left;">
-                            <div class="flexslider-container">
-                                <div class="flexslider">
-                                    <ul class="slides">
-                                        <li>
-                                            <img src="images/menu-gallery/menu1.png" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu2.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu3.png" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu4.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu5.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu6.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu7.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu8.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu9.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu10.jpg" />
-                                        </li>
-                                        <li>
-                                            <img src="images/menu-gallery/menu11.jpg" />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
-                            <h2 class="section-title">Hidangan nikmat khas Mamma's Kitchen</h2>
-                        </div>
-                        
-
-                    </div> <!-- /.row -->
-                </div> <!-- /.container-fluid -->
-            </div> <!-- /.wrapper -->
-        </section>
-
-
-
-
-        <!--== 15. Reserve A Table! ==-->
-        <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_black.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class="row dis-table">
-                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
-                            <h2 class="section-title">Reservasi meja anda!</h2>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
-                            
-                        </div>
-                    </div> <!-- /.dis-table -->
-                </div> <!-- /.row -->
-            </div> <!-- /.wrapper -->
-        </section> <!-- /#reserve -->
-
-
-
-        <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_color.png">
-            <div class="wrapper">
-                <div class="container-fluid">
-                    <div class=" section-content">
-                        <div class="row">
-                            <div class="col-md-5 col-sm-6">
-                                <form class="reservation-form" method="post" action="add.php">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Nama">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="number" id="number" required="required" placeholder="  &#xf007;  Jumlah orang">
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="form-group">
-                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Telepon">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Waktu">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 col-sm-12">
-                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3"  placeholder="  &#xf086;  Pesan"></textarea>
-                                        </div>
-
-                                        <div class="col-md-12 col-sm-12">
-                                            <button type="submit" id="submit" name="submit" class="btn btn-reservation">
-                                                <span><i class="fa fa-check-circle-o"></i></span>
-                                                Buat reservasi
-                                            </button>
-                                        </div>
-                                            
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="col-md-2 hidden-sm hidden-xs"></div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="opening-time">
-                                    <h3 class="opening-time-title">Jam buka</h3>
-                                    <p>Senin s.d. Jumat: 11.00 - 22.00 </p>
-                                    <p>Sabtu & Minggu: 11:00 - 00:00 </p>
-
-                                    
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-
-        <section id="contact" class="contact">
-            <div class="container-fluid color-bg">
-                <div class="row dis-table">
-                    <div class="hidden-xs col-sm-6 dis-table-cell">
-                        <h2 class="section-title">Hubungi kami</h2>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 dis-table-cell">
-                        <div class="section-content">
-                            <p>Jl. Mulyosari no 223A, Surabaya</p>
-                            <p>031 - 5545675</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-media">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <ul class="center-block">
-                                <li><a href="#" class="fb"></a></li>
-                                <li><a href="#" class="twit"></a></li>
-                                <li><a href="#" class="g-plus"></a></li>
-                                <li><a href="#" class="link"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        
-
-
-
-
-
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="copyright text-center">
-                            <p>
-                                &copy; Copyright, 2015 <a href="#">Your Website Link.</a> Theme by <a href="http://themewagon.com/"  target="_blank">ThemeWagon</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/jquery.validate.js"></script>
-        <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-        <script type="text/javascript" src="js/jQuery.scrollSpeed.js"></script>
-        <script src="js/script.js"></script>
-        
-
-    </body>
-</html>
+<?php
+/**
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP
+ *
+ * This content is released under the MIT License (MIT)
+ *
+ * Copyright (c) 2014 - 2018, British Columbia Institute of Technology
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @package	CodeIgniter
+ * @author	EllisLab Dev Team
+ * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
+ * @copyright	Copyright (c) 2014 - 2018, British Columbia Institute of Technology (http://bcit.ca/)
+ * @license	http://opensource.org/licenses/MIT	MIT License
+ * @link	https://codeigniter.com
+ * @since	Version 1.0.0
+ * @filesource
+ */
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ */
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
+switch (ENVIRONMENT)
+{
+	case 'development':
+		error_reporting(-1);
+		ini_set('display_errors', 1);
+	break;
+
+	case 'testing':
+	case 'production':
+		ini_set('display_errors', 0);
+		if (version_compare(PHP_VERSION, '5.3', '>='))
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
+		}
+		else
+		{
+			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
+		}
+	break;
+
+	default:
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'The application environment is not set correctly.';
+		exit(1); // EXIT_ERROR
+}
+
+/*
+ *---------------------------------------------------------------
+ * SYSTEM DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" directory.
+ * Set the path if it is not in the same directory as this file.
+ */
+	$system_path = 'system';
+
+/*
+ *---------------------------------------------------------------
+ * APPLICATION DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * directory than the default one you can set its name here. The directory
+ * can also be renamed or relocated anywhere on your server. If you do,
+ * use an absolute (full) server path.
+ * For more info please see the user guide:
+ *
+ * https://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ */
+	$application_folder = 'application';
+
+/*
+ *---------------------------------------------------------------
+ * VIEW DIRECTORY NAME
+ *---------------------------------------------------------------
+ *
+ * If you want to move the view directory out of the application
+ * directory, set the path to it here. The directory can be renamed
+ * and relocated anywhere on your server. If blank, it will default
+ * to the standard location inside your application directory.
+ * If you do move this, use an absolute (full) server path.
+ *
+ * NO TRAILING SLASH!
+ */
+	$view_folder = '';
+
+
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here. For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT: If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller. Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ */
+	// The directory name, relative to the "controllers" directory.  Leave blank
+	// if your controller is not in a sub-directory within the "controllers" one
+	// $routing['directory'] = '';
+
+	// The controller class file name.  Example:  mycontroller
+	// $routing['controller'] = '';
+
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
+
+
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (($_temp = realpath($system_path)) !== FALSE)
+	{
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
+	}
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// Path to the system directory
+	define('BASEPATH', $system_path);
+
+	// Path to the front controller (this file) directory
+	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
+
+	// Name of the "system" directory
+	define('SYSDIR', basename(BASEPATH));
+
+	// The path to the "application" directory
+	if (is_dir($application_folder))
+	{
+		if (($_temp = realpath($application_folder)) !== FALSE)
+		{
+			$application_folder = $_temp;
+		}
+		else
+		{
+			$application_folder = strtr(
+				rtrim($application_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
+	{
+		$application_folder = BASEPATH.strtr(
+			trim($application_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
+
+	// The path to the "views" directory
+	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.'views';
+	}
+	elseif (is_dir($view_folder))
+	{
+		if (($_temp = realpath($view_folder)) !== FALSE)
+		{
+			$view_folder = $_temp;
+		}
+		else
+		{
+			$view_folder = strtr(
+				rtrim($view_folder, '/\\'),
+				'/\\',
+				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+			);
+		}
+	}
+	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
+	{
+		$view_folder = APPPATH.strtr(
+			trim($view_folder, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		);
+	}
+	else
+	{
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
+		exit(3); // EXIT_CONFIG
+	}
+
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
