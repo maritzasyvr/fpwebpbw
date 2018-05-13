@@ -79,7 +79,6 @@
                         <li><a href="#pricing">menu</a></li>
                         <li><a href="#reserve">reservasi</a></li>
                         <li><a href="#contact">kontak</a></li>
-                        <li><a href=login>masuk</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.row -->
@@ -404,7 +403,7 @@
                     <div class=" section-content">
                         <div class="row">
                             <div class="col-md-5 col-sm-6">
-                                <form class="reservation-form" method="post" action="add.php">
+                                <form class="reservation-form" method="post" action="<?php echo base_url();?>admin/tambah_aksi">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">

@@ -4,7 +4,7 @@
 </head>
 
 <body>
-  <a href="tekinfo/admin">Home</a>
+  <a href="<?php echo base_url();?>admin">Home</a>
   <br/><br/>
 
   <?php foreach($crud_db as $c){ ?>

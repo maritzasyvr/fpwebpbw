@@ -16,7 +16,7 @@ class Admin extends CI_Controller{
 
   
     $data['crud_db'] = $this->m_admin->tampil_data()->result();
-    $this->load->view('v_admin',$data);
+    $this->load->view('indexadmin',$data);
   }
 
   function export(){
@@ -25,7 +25,7 @@ class Admin extends CI_Controller{
     
 
     $data['crud_db'] = $this->m_admin->tampil_data()->result();
-    $this->load->view('v_admin',$data);
+    $this->load->view('indexadmin',$data);
  }
 
   function edit($id){
@@ -61,7 +61,7 @@ class Admin extends CI_Controller{
     $where = array('id' => $id);
 
     $this->m_admin->update_data($where,$data,'users');
-    redirect('admin/');
+    redirect('admin');
   }
 
   function hapus($id){
@@ -93,7 +93,7 @@ class Admin extends CI_Controller{
       'message' => $message
 
 			);
-		$this->m_admin->input_data($data,'crud_web');
+		$this->m_admin->input_data($data,'users');
 		redirect('welcome');
 	}
 }
