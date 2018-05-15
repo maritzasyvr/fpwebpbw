@@ -142,13 +142,13 @@
                                       <td><?php echo $c->event ?></td>
                                       <td><?php echo $c->message ?></td>
                                       <td>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Ubah'); ?>
+                                            <?php echo anchor('admin/edit/'.$c->id,'<button style="background-color:#2200ff;color:white;width:68px;height:25px">Ubah</button>'); ?>
                                             <br>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Sudah dihubungi'); ?>
                                             <br>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Selesai'); ?>
+                                            <?php echo anchor('admin/edit/'.$c->id,'<button style="background-color:#06a025;color:white;width:68px;height:25px">Selesai</button>'); ?>
                                             <br>
-                                                              <?php echo anchor('admin/hapus/'.$c->id,'Tolak'); ?>
+                                            <br>
+                                                              <?php echo anchor('admin/hapus/'.$c->id,'<button style="background-color:red;color:white;width:68px;height:25px">Tolak</button>'); ?>
                                       </td>
                                     </tr>
                                     <?php } ?>

@@ -65,9 +65,12 @@ class Admin extends CI_Controller{
   }
 
   function hapus($id){
+    // $data['crud_db'] = $this->m_admin->tampil_data()->result();
+    // $this->load->view('indexadmin',$data);
   $where = array('id' => $id);
   $this->m_admin->hapus_data($where,'users');
-  redirect('admin/index');
+  redirect('admin');
+ 
   }
 
   function tambah_aksi(){

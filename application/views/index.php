@@ -68,7 +68,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img id="logo" src="asset/images/Logo_main.png" class="logo img-responsive">
+                        <img  src="asset/images/Logo_main.png" class="logo img-responsive">
                     </a>
                 </div>
 
@@ -103,7 +103,7 @@
                     </div> <!-- /.header-content -->
                 </div>
             </div>
-           
+            
         </section>
 
 
@@ -167,7 +167,7 @@
                                         <img src="asset/images/food1.jpg" class="img-responsive" alt="Food" >
                                         <div class="menu-desc text-center">
                                             <span>
-                                                <h3>Kari tomat</h3>
+                                                <h3>Chicken egg roll</h3>
                                                 Potongan tomar segar berlapis saus kari
                                             </span>
                                         </div>
@@ -379,7 +379,7 @@
 
         <!--== 15. Reserve A Table! ==-->
         <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="asset/images/icons/reserve_black.png">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="asset/images/icons/reserve_color.png">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -403,14 +403,14 @@
                     <div class=" section-content">
                         <div class="row">
                             <div class="col-md-5 col-sm-6">
-                                <form class="reservation-form" method="post" action="<?php echo base_url();?>admin/tambah_aksi">
+                                <form class="reservation-form" method="post" id="myForm" action="<?php echo base_url();?>add" onSubmit="alert('Anda telah melakukan reservasi meja. Kami akan menghubungi anda melalui layanan SMS mengenai kesediaan tempat.');">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
                                                 <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Nama">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf007; No HP">
+                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf007; No HP">
                                             </div>
                                             <div class="form-group">
                                                 <input type="text" class="form-control reserve-form empty iconified" name="event" id="event" required="required" placeholder="&#xf017;  Event">
@@ -437,10 +437,26 @@
 
 
                                         <div class="col-md-12 col-sm-12">
-                                            <button type="submit" id="submit" name="submit" class="btn btn-reservation">
+                                            <button type="submit" id="submit" name="submit" class="btn btn-reservation" >
                                                 <span><i class="fa fa-check-circle-o"></i></span>
                                                 Buat reservasi
                                             </button>
+                                                        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Anda telah melakukan reservasi meja</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Kami akan segera menghubungi anda melalui SMS mengenai ketersediaan tempat. Terima Kasih &hellip;</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
                                         </div>
                                             
                                     </div>
