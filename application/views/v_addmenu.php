@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>KiosCoding</title>
+  <title>Mamma's Kitchen</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <style>
   .file {
@@ -20,7 +20,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://www.kioscoding.com">KiosCoding</a>
+
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -35,7 +35,7 @@
       </nav>
    <br><br><br><br><br>
    <div class="container">
-     <h3 align="center"><b>MASUKAN PRODUK BARU</b></h3>
+     <h3 align="center"><b>Tambah Menu</b></h3>
  <div class="col-md-3">
  </div>
  <div class="jumbotron col-md-6">
@@ -43,15 +43,15 @@
   <?php echo form_open_multipart('addmenu/proses_input');?>
     <div class="form-group">
       <label for="judul">Judul :</label>
-      <input type="text" name="judul" class="form-control" placeholder="Masukan Nama Produk" id="judul" required>
+      <input type="text" name="judul" class="form-control" placeholder="Masukkan nama menu" id="judul" required>
     </div>
     <div class="form-group">
       <label for="deskripsi">Deskripsi :</label>
-      <input type="text" name="deskripsi" class="form-control" placeholder="Masukan Harga Produk" id="deskripsi" required>
+      <input type="text" name="deskripsi" class="form-control" placeholder="Masukkan deskripsi singkat terkait menu" id="deskripsi" required>
     </div>
     <div class="form-group">
       <label for="harga">Harga :</label>
-      <input type="number" name="harga" class="form-control" placeholder="Masukan Stok Produk" id="harga" required>
+      <input type="number" name="harga" class="form-control" placeholder="Masukkan harga menu" id="harga" required>
     </div>
     <div class="form-group">
       <label for="gambar">Gambar :</label>
@@ -60,12 +60,12 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
         <input type="text" id="raw" name="gambar" class="form-control input-lg" disabled placeholder="Upload Gambar">
         <span class="input-group-btn">
-          <button class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Telusuri</button>
+          <button style="background-color:#8bc34a; border:#8bc34a;" class="browse btn btn-primary input-lg" type="button"><i class="glyphicon glyphicon-search"></i> Cari</button>
         </span>
       </div><br>
     </div>
     <input id="imgName" type="text" name="nama_gambar" hidden>
-        <button type="submit" onclick="setImgName()" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Simpan</button>
+        <button style="background-color:#8bc34a;border:#8bc34a;" type="submit" onclick="setImgName()" class="btn btn-primary"><i class="glyphicon glyphicon-floppy-disk"></i> Simpan</button>
  <?php
     echo form_close();
     ?>

@@ -53,7 +53,6 @@
             google.maps.event.addDomListener(window, 'load', initialize);
         </script>
 
-
     </head>
     <body data-spy="scroll" data-target="#template-navbar">
 
@@ -145,11 +144,8 @@
                                     <div class="section-header">
                                         <h2 class="pricing-title">Intip menu-menu terbaik kami</h2>
                                         <ul id="filter-list" class="clearfix">
-                                            <li class="filter" data-filter="all">Semua</li>
-                                            <li class="filter" data-filter=".breakfast">Sarapan</li>
-                                            <li class="filter" data-filter=".special">Spesial</li>
-                                            <li class="filter" data-filter=".desert">Penutup</li>
-                                            <li class="filter" data-filter=".dinner">Makan malam</li>
+                                            <li class="filter" data-filter="all">Yuk coba!</li>
+                                            
                                         </ul><!-- @end #filter-list -->
                                     </div>
                                 </div>
@@ -168,7 +164,7 @@
                                     <li class="item dinner">
 
                                     <a href="#">
-                                        <img src="asset/images/<?php echo $m->gambar ?>" width="250" height="250" class="img-responsive" alt="Food" >
+                                        <img src="asset/images/<?php echo $m->gambar ?>" style=" max-height: 200px; max-width: 200px;";  class="img-responsive" alt="Food" >
                                         <div class="menu-desc text-center">
                                             <span>
                                                 <h3><?php echo $m->judul ?></h3>
@@ -395,18 +391,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="social-media">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <ul class="center-block">
-                                <li><a href="#" class="fb"></a></li>
-                                <li><a href="#" class="twit"></a></li>
-                                <li><a href="#" class="g-plus"></a></li>
-                                <li><a href="#" class="link"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
 

@@ -15,8 +15,8 @@ class Addmenu extends CI_Controller {
       $config = [
         'upload_path' => './asset/images/',
         'allowed_types' => 'gif|jpg|png',
-        'max_size' => 2000, 'max_width' => 2000,
-        'max_height' => 2000
+        'max_size' => 10000, 'max_width' => 10000,
+        'max_height' => 10000
       ];
       echo $this->input->post('nama_gambar');
       $this->load->library('upload', $config);

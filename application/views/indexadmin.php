@@ -82,12 +82,7 @@
                         <li>
                             <a href="<?php echo base_url();?>newadminmenu"><i class="fa fa-table fa-fw"></i> Katalog Menu</a>
                         </li>
-                        <li>
-                            <a href="tablesheader.php"><i class="fa fa-table fa-fw"></i> Header</a>
-                        </li>
-                        <li>
-                            <a href="flot.php"><i class="fa fa-table fa-fw"></i> Report</a>
-                        </li>
+                        
 
                     </ul>
                 </div>
