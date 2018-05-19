@@ -22,4 +22,18 @@ function update_data($where,$data,$table){
   $this->db->where($where);
   $this->db->update($table,$data);
   }	
+
+function login($username, $password)
+{
+  $this->db->select('username','password')
+           ->from('akun')
+           ->where('username', $username)
+           ->where('password', $password);
+  $result = $this->db->get()->num_rows();
+
+  if($result==1) return true;
+  else return false;
+}
+
+
 }

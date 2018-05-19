@@ -109,14 +109,18 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Tabel seluruh katalog menu 
+                            Tabel seluruh katalog
+                            <br> 
+                            <br>
+                            <div style="text-align: right">
+                            <a href="<?php echo base_url('addmenu/input'); ?>"> <button style="background-color:#06a025; color:white; width:68px; height:25px">Tambah</button> </a>
+                        </div>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
                                         <th>Judul</th>
                                         <th>Deskripsi</th>
                                         <th>Harga</th>
@@ -127,26 +131,18 @@
                                 <tbody>
 
                                     <?php
-                                    foreach($crud_db as $c){
+                                    foreach($menu as $m){
                                     ?>
                                     <tr class="odd gradeX">
-                                     <td><?php echo $c->timestamp ?></td>
-                                      <td><?php echo $c->id ?></td>
-                                      <td><?php echo $c->name ?></td>
-                                      <td><?php echo $c->phone ?></td>
-                                      <td><?php echo $c->time ?></td>
-                                      <td><?php echo $c->number ?></td>
-                                      <td><?php echo $c->orderan ?></td>
-                                      <td><?php echo $c->event ?></td>
-                                      <td><?php echo $c->message ?></td>
+                                      <td><?php echo $m->judul ?></td>
+                                      <td><?php echo $m->deskripsi ?></td>
+                                      <td><?php echo $m->harga ?></td>
+                                      <td ><img src="asset/images/<?php echo $m->gambar ?>" width="100" height="100"></td>
                                       <td>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Ubah'); ?>
                                             <br>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Sudah dihubungi'); ?>
+                                            <?php echo anchor('newadminmenu/edit/'.$m->id,'<button style="background-color:#2200ff;color:white;width:68px;height:25px">Ubah</button>'); ?>
                                             <br>
-                                            <?php echo anchor('admin/edit/'.$c->id,'Selesai'); ?>
-                                            <br>
-                                                              <?php echo anchor('admin/hapus/'.$c->id,'Tolak'); ?>
+                                            <?php echo anchor('newadminmenu/hapus/'.$m->id,'<button style="background-color:red;color:white;width:68px;height:25px">Hapus</button>'); ?>
                                       </td>
                                     </tr>
                                     <?php } ?>

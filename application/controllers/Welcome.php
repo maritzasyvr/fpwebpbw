@@ -20,7 +20,9 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index');
+		$this->load->model('m_menu');
+		$data['menu'] = $this->m_menu->tampil_data()->result();
+		$this->load->view('index',$data);
 	}
 	// function login(){
 	// 	$this->load->view('v_login');

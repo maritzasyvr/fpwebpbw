@@ -124,6 +124,7 @@
                                         <th>Orderan</th>
                                         <th>Event</th>
                                         <th>Keterangan</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -141,11 +142,12 @@
                                       <td><?php echo $c->orderan ?></td>
                                       <td><?php echo $c->event ?></td>
                                       <td><?php echo $c->message ?></td>
+                                      <td><?php echo $c->status ?></td>
                                       <td>
                                             <?php echo anchor('admin/edit/'.$c->id,'<button style="background-color:#2200ff;color:white;width:68px;height:25px">Ubah</button>'); ?>
                                             <br>
                                             <br>
-                                            <?php echo anchor('admin/edit/'.$c->id,'<button style="background-color:#06a025;color:white;width:68px;height:25px">Selesai</button>'); ?>
+                                            <?php echo anchor('admin/selesai/'.$c->id,'<button style="background-color:#06a025;color:white;width:68px;height:25px">Selesai</button>'); ?>
                                             <br>
                                             <br>
                                                               <?php echo anchor('admin/hapus/'.$c->id,'<button style="background-color:red;color:white;width:68px;height:25px">Tolak</button>'); ?>

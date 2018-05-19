@@ -12,9 +12,7 @@ class Admin extends CI_Controller{
   }
   
 
-  function index(){
-
-  
+  function index(){  
     $data['crud_db'] = $this->m_admin->tampil_data()->result();
     $this->load->view('indexadmin',$data);
   }
@@ -57,6 +55,19 @@ class Admin extends CI_Controller{
       'message' => $message
 
 			);
+
+    $where = array('id' => $id);
+
+    $this->m_admin->update_data($where,$data,'users');
+    redirect('admin');
+  }
+
+    function selesai($id){
+
+    $data = array(
+      'status' => 'sudah'
+
+      );
 
     $where = array('id' => $id);
 

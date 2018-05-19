@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="asset/css/flexslider.css">
         <link rel="stylesheet" href="asset/css/pricing.css">
         <link rel="stylesheet" href="asset/css/main.css">
+       
 
 
         <script src="asset/js/jquery-1.11.2.min.js"></script>
@@ -161,133 +162,25 @@
                     <div class="row">  
                         <div class="col-md-10 col-md-offset-1">
                             <ul id="menu-pricing" class="menu-price">
-                                <li class="item dinner">
+                                <?php
+                                    foreach($menu as $m){
+                                    ?>
+                                    <li class="item dinner">
 
                                     <a href="#">
-                                        <img src="asset/images/food1.jpg" class="img-responsive" alt="Food" >
+                                        <img src="asset/images/<?php echo $m->gambar ?>" width="250" height="250" class="img-responsive" alt="Food" >
                                         <div class="menu-desc text-center">
                                             <span>
-                                                <h3>Chicken egg roll</h3>
-                                                Potongan tomar segar berlapis saus kari
+                                                <h3><?php echo $m->judul ?></h3>
+                                                <?php echo $m->deskripsi ?>
                                             </span>
                                         </div>
                                     </a>
                                         
-                                    <h2 class="white">Rp 17.000</h2>
+                                    <h2 class="white">Rp. <?php echo $m->harga ?></h2>
                                 </li>
-
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="asset/images/food2.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Udang asam manis</h3>
-                                                Udang segar dengan varian saus asam manis
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 30.000</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="asset/images/food3.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Rebusan tomat</h3>
-                                                Tomat yang direbus dengan teknik soft boiling
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 15.000</h2>
-                                </li>
-                                <li class="item breakfast special">
-
-                                    <a href="#">
-                                        <img src="asset/images/food4.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Udang telur asin</h3>
-                                                Udang segar dengan varian saus telur asin
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 30.000</h2>
-                                </li>
-                                <li class="item breakfast">
-
-                                    <a href="#">
-                                        <img src="asset/images/food5.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Salad sayur</h3>
-                                                Salad yang terdiri dari bermacam sayuran seperti kentang, kol, dan jagung
-                                            </span>
-                                        </div>
-                                    </a>
-                                        
-                                    <h2 class="white">Rp 20.000</h2>
-                                </li>
-                                <li class="item dinner special">
-
-                                    <a href="#">
-                                        <img src="asset/images/food6.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Ayam saus inggris</h3>
-                                                Potongan ayam dipalisi saus kecap dan rawit merah
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 28.000</h2>
-                                </li>
-                                <li class="item desert">
-
-                                    <a href="#">
-                                        <img src="asset/images/food7.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Makaroni paprika</h3>
-                                                Makrani dengan potongan ayam kecil dan paprika hijau
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 33.000</h2>
-                                </li>
-                                <li class="item dinner">
-
-                                    <a href="#">
-                                        <img src="asset/images/food8.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Selada saus jeruk nipis</h3>
-                                                Sayuran segar diselimuti varian saus jeruk nipis
-                                            </span>
-                                        </div>
-                                    </a>
-
-                                    <h2 class="white">Rp 17.000</h2>
-                                </li>
-                                <li class="item desert special">
-
-                                    <a href="#">
-                                        <img src="asset/images/food9.jpg" class="img-responsive" alt="Food" >
-                                        <div class="menu-desc">
-                                            <span>
-                                                <h3>Roti es krim</h3>
-                                                Roti panggang dilapisi es krim coklat dan stroberi
-                                            </span>
-                                        </div>
-                                    </a>
-                                    
-                                    <h2 class="white">Rp 18.000</h2>
-                                </li>  
+                                <?php } ?>
+                                
 
                             </ul>
 
@@ -397,7 +290,7 @@
 
 
         <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="asset/images/icons/reserve_color.png">
+         
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class=" section-content">
@@ -413,18 +306,20 @@
                                                 <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf007; No HP">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="event" id="event" required="required" placeholder="&#xf017;  Event">
+                                                <input type="number" min="1" class="form-control reserve-form empty iconified" name="number" id="number" required="required" placeholder="&#xf017;  Jumlah Kursi">
                                             </div>
+                                           
 
                                         </div>
 
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="date" id="date" required="required" placeholder="  &#xf095;  Waktu">
+                                                <input type="datetime-local" class="form-control reserve-form empty iconified" name="date" id="time" required="required" placeholder="  &#xf095;  Waktu">
                                             </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="number" id="number" required="required" placeholder="&#xf017;  Jumlah Orang">
+                                             <div class="form-group">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="event" id="event" required="required" placeholder="&#xf017;  Event">
                                             </div>
+                                            
                                              
                                         </div>
 
@@ -432,7 +327,7 @@
                                             <textarea type="text" name="orderan" class="form-control reserve-form empty iconified" id="orderan" rows="3"  placeholder="  &#xf086;  Orderan"></textarea>
                                         </div>
                                         <div class="col-md-12 col-sm-12">
-                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3"  placeholder="  &#xf086;  Pesan"></textarea>
+                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3"  placeholder="  &#xf086;  Keterangan"></textarea>
                                         </div>
 
 
@@ -441,6 +336,7 @@
                                                 <span><i class="fa fa-check-circle-o"></i></span>
                                                 Buat reservasi
                                             </button>
+
                                                         <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -460,6 +356,8 @@
                                         </div>
                                             
                                     </div>
+
+
                                 </form>
                             </div>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Teknologi Informasi-ITS</title>
+    <title>Mamma's Kitchen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Include stylesheet for better appearance of login form -->
